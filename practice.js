@@ -22,7 +22,16 @@ function init() {
 }
 
 function displayTwoSum() {
-    var x = getElementById
+    const x = document.getElementById('first-algorithm')
+    if(x.style.display === 'block'){
+        x.style.display = 'none';
+        addTwoSum.innerHTML = `Open First Algorithm`
+    } else {
+        x.style.display = 'block';
+        addTwoSum.innerHTML = `Close First Algorithm`
+    }
+        
+
 }
 
 
