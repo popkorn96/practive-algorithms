@@ -1,22 +1,44 @@
 // Explain each line of code and its purpose towards achieving the solution
 
+// Frequency Counter - valudAnagram
+// Given two strings, write a function to determine if the second string is an anagram
+// of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, 
+// Such as cinema, formed from iceman.
+
+// Examples: 
+// validAnagram('','') => true
+// validAnagram('aaz', 'zza') => false (not corresponding values)
+// validAnagram('awesome', 'awesom') => false (not corrensponding lengths)
+// validAnagram('tar', 'rat') => true
+
+
 function validAnagram(arr1, arr2){
+    // his if statement is to determine whether the length of each array equates the other;
     if(arr1.length !== arr2.length){
         return false
     }
-    let freqCounter1 = {};
-    let freqCounter2 = {};
-    for(let val of arr1){
-        freqCounter1[val] = (freqCounter1[val] || 0) + 1
+
+    let lookup = {}
+
+    // iterate through first array and determine the number of times each letter is present in the array
+    for(let i = 0; i < arr1.length; i++){
+        let letter = arr1[i]
+        // if letter exists, increment, otherwise set to 1
+        lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1;
     }
-    for(let val of arr2){
-        freqCounter2[val] = (freqCounter2[val] || 0) + 1
-    }
-    for(let key in freqCounter1){
-        if(freqCounter2[key] !== freqCounter1[key]){
+    console.log(lookup)
+
+    for(let i = 0; i < arr2.length; i++){
+        let letter = arr2[i];
+        //  if we can't find the letter or the letter is zero, then it's not an anagram
+        if(!lookup[letter]){
             return false
+            // if we find the letter, we decrement the number of times each letter is present in the array 
+        } else {
+            lookup[letter] -= 1;
         }
-    } return true 
+        
+    } return true
     
   // add whatever parameters you deem necessary - good luck!
 }

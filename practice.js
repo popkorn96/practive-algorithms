@@ -16,11 +16,11 @@ const addTwoSum = document.getElementById('open-first-algorithm')
 function init() {
     // The console.info()method outputs an informational message to the Web Console. In Firefox, a small 'i' icon is displayed next to these items int he Web Console's log.
     console.info('DOM loaded')
-    // This event listener 
+    // This event listener is triggered when the value assigned to 'displauTwoSum' is 'ckicked'
     addTwoSum.addEventListener('click', displayTwoSum)
 
 }
-
+// This function is used to toggle the button and <div> tag contents between the open and closed 
 function displayTwoSum() {
     const x = document.getElementById('first-algorithm')
     if(x.style.display === 'block'){
