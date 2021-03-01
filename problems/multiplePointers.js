@@ -24,3 +24,38 @@ function sumZero(arr){
         }
     }
 }
+
+function countUniqueValues(arr){
+    if(arr.length === 0){
+        return 0;
+    }
+    if(arr.length === 1){
+        return 1
+    }
+    let left = 0;
+    let right = 1;
+    let unique = 0;
+    while(right <= arr.length){
+        if(arr[left] !== arr[right]){
+            unique++;
+            right++;
+            left++;
+        } else {
+            right++;
+            left = right - 1
+        }
+    }
+    return unique
+}
+
+function uniqueValuesUdemy(arr){
+    var i = 0;
+    for(var j = 0; j < arr.length; j++){
+        if(arr[i] !== arr[j]){
+            i++;
+            arr[i]= arr[j]
+        }
+        console.log(i,j)
+    }
+    return i + 1
+}
