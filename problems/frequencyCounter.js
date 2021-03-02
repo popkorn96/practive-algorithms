@@ -84,3 +84,38 @@ function areThereDuplicates(...args){
     } return false
 }
 
+// This function will be implemented using the frequency counter
+
+function areThereDuplicates2(...args){
+    let frequencyCounter1 = {};
+
+    for(let i = 0; i < args.length; i++){
+        let letter = args[i];
+        frequencyCounter1[letter] ? frequencyCounter1[letter] += 1 : frequencyCounter1[letter] = 1;
+    }
+    console.log(frequencyCounter1)
+    for(let i = 0; i < args.length; i++){
+        let letter = args[i];
+        if(!frequencyCounter1[letter]){
+            return false;
+        } else {
+            frequencyCounter1 - 1;
+        }
+    } return true 
+}
+
+// Write a function called averagePair, Given a sorted array of integers and a target average, 
+// determine if there is a pari of values in the array where the average of the pair equals the agerage target 
+// There may be more than one pair that equals the target average. 
+
+function averagePair(arr, val){
+    let start = 0;
+    let end = arr.length - 1;
+    while(start < end){
+        let avg = (arr[start]+arr[end] / 2);
+        if(avg === val) return true;
+        else if(avg < val) return start++;
+        else end--;
+    }
+    return false
+}
