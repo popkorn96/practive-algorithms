@@ -11,5 +11,3 @@
 
 // Sliding Window:
 // This pattern involves createing a whindow which can either be an arrau
-// or number from one position to another
-
