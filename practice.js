@@ -24,6 +24,7 @@ function init() {
 function displayTwoSum() {
     const x = document.getElementById('first-algorithm')
     if(x.style.display === 'block'){
+        
         x.style.display = 'none';
         addTwoSum.innerHTML = `Open First Algorithm`
     } else {
