@@ -59,3 +59,15 @@ function uniqueValuesUdemy(arr){
     }
     return i + 1
 }
+
+unction uniqueValuesUdemy(arr){
+    var i = 0;
+    for(var j = 0; j < arr.length; j++){
+        if(arr[i] !== arr[j]){
+            i++;
+            arr[i]= arr[j]
+        }
+        console.log(i,j)
+    }
+    return i + 1
+}
