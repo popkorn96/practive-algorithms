@@ -154,5 +154,3 @@ function isSubsequence(str1, str2){
 
 function isSubsequence(str1, str2){
     let start = 0;
-    let next = 0;
-
