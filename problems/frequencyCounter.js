@@ -160,6 +160,3 @@ function isSubsequence(str1, str2){
     while (next < str2.length){
         if(str2[next] === str1[start]) {
             start ++;
-            next++;
-        }
-        if (start === str1.length) return true
