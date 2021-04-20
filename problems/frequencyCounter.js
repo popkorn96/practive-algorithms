@@ -156,5 +156,3 @@ function isSubsequence(str1, str2){
     let start = 0;
     let next = 0;
 
-    if(str1.length > str2.length) return false;
-    while (next < str2.length){
