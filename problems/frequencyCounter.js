@@ -13,7 +13,7 @@
 
 
 function validAnagram(arr1, arr2){
-    // his if statement is to determine whether the length of each array equates the other;
+    // This if statement is to determine whether the length of each array equates the other;
     if(arr1.length !== arr2.length){
         return false
     }
@@ -42,6 +42,13 @@ function validAnagram(arr1, arr2){
     
   // add whatever parameters you deem necessary - good luck!
 }
+
+// Examples: 
+// validAnagram('','') => true
+// validAnagram('aaz', 'zza') => false (not corresponding values)
+// validAnagram('awesome', 'awesom') => false (not corrensponding lengths)
+// validAnagram('tar', 'rat') => true
+
 function sameFrequency(val1, val2){
     let first = val1.toString();
     let second = val2.toString();
@@ -104,6 +111,8 @@ function areThereDuplicates2(...args){
     } return true 
 }
 
+
+// Exercise: averagePair()
 // Write a function called averagePair, Given a sorted array of integers and a target average, 
 // determine if there is a pari of values in the array where the average of the pair equals the agerage target 
 // There may be more than one pair that equals the target average. 
@@ -118,4 +127,27 @@ function averagePair(arr, val){
         else end--;
     }
     return false
+}
+
+// Exercise: isSubsequence()
+// Write a function called isSubsequence() which takes in two strings and checks whether the characters 
+// in the first string form a subsequence of the characters in the second string
+// In other words, the function should check whether the characters in the first string appear
+// somewhere in the second string, *without their order changing*
+
+function isSubsequence(str1, str2){
+    let start = 0;
+    let next = 0;
+    // edge case: If the first string is longer than the second, it can't be a subsequence of the second 
+    if(str1.length > str2.length) return false;
+    while (next < str2.length) {    
+        if (str2[next] === str1[start]){ 
+            start++;
+            next++;   
+        }
+        if (start === str1.length) return true;    
+        next++;  
+    }
+    return false;
+
 }
