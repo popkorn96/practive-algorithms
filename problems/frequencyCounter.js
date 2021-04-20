@@ -163,7 +163,7 @@ function isSubsequence(str1, str2){
             next++;
         }
         if (start === str1.length) return true;
-        next
+        next++
         }
-    }
+    }return false
 }
