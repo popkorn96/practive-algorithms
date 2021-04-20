@@ -172,4 +172,4 @@ function sameFrequency(val1, val2){
             lookup[letter] - 1;
         }
     } return true;
-}
+} //find a different way to do this one
