@@ -165,5 +165,4 @@ function isSubsequence(str1, str2){
         if (start === str1.length) return true;
         next++
         }
-    }return false
-}
+ 
