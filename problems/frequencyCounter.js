@@ -151,5 +151,3 @@ function isSubsequence(str1, str2){
     return false;
 
 }
-
-function isSubsequence(str1, str2){
