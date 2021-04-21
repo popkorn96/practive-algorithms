@@ -150,4 +150,22 @@ function isSubsequence(str1, str2){
     }
     return false;
 
+
+}
+
+function isSubsequence(str1, str2){
+    let start = 0;
+    let next = 0;
+    // edge case: If the first string is longer than the second, it can't be a subsequence of the second 
+    if(str1.length > str2.length) return false;
+    while (next < str2.length) {    
+        if (str2[next] === str1[start]){ 
+            start++;
+            next++;   
+        }
+        if (start === str1.length) return true;    
+        next++;  
+    }
+    return false;
+
 }
